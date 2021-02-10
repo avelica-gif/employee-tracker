@@ -5,11 +5,7 @@ const ctable = require("console.table");
 const connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
-
-
     user: 'root',
-
-
     password: 'Dvaonline7!',
     database: 'employees_db',
 });
@@ -151,8 +147,8 @@ const updateRole = () => {
                 name: 'role_id',
             }
         ])
-        .then((answer) => {
-            updateRole(answer);
+        .then((response) => {
+            updateRole(response);
         })
 
 
