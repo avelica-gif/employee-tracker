@@ -69,7 +69,21 @@ function addDept() {
 
         .then((response) => {
             console.log(response);
+            connection.query(
+                'INSERT INTO department SET ?',
+                {
+                    name: response.dept_name,
+                },
+                (err) => {
+                    if (err) throw err;
+                    
+                  }
+
+
+
+            )
         })
+
 }
 
 function addRole() {
@@ -128,7 +142,29 @@ function addEmployee() {
 
 }
 
-
+const viewCategory () {
+    inquirer
+    .prompt([
+        {
+            name: "action",
+            type: "list",
+            message: "What category would you like to view?",
+            choices: ["DEPARTMENTS", "ROLES", "EMPLOYEES"]
+        },
+    ])
+    .then((answer) => {
+        if (answer.action === "Departments") {
+           getDept();
+        }
+        else if (answer.action === "Roles") {
+            getRoles();
+        }
+        else if (answer.action === "Employees") {
+            getEmployess();
+        }
+        
+    });
+}
 
 
 const updateRole = () => {
