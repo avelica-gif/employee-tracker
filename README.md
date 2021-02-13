@@ -3,7 +3,8 @@
 This is an application is for companies to  view and manage the departments, roles, and employees and have an organized business.
 
 GitHub repo: https://github.com/avelica-gif/employee-tracker
-Screencastify: 
+Screencastify: https://drive.google.com/file/d/1fTFyZjCzAYtid-fYkdNLIZ6ubzAfKPoZ/view
+
 
 What was used for this project:
 -Node
